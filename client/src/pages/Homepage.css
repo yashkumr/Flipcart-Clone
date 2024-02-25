@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* dynamic-porduct */
+.dynamic-porduct {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+}
+
+.dynamic-button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    color: #fff;
+    background: rgb(178, 184, 178);
+}
+
+.dynamic-button {
+    background-color: rgb(68, 68, 179);
+    color: white;
+}
+
+.electronics-slider {
+    position: relative;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 2px;
+
+}
+
+.left-arrow {
+    position: absolute;
+    right: 44px;
+
+}

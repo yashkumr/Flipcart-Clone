@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.trending-product{
+    /* border: 2px solid red; */
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+}
+
+.trending-product>.trending-products{
+    /* border: 2px solid green; */
+
+
+}
+.trending-product>.trending-products>img{
+    width: 100%;
+    margin: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    /* mix-blend-mode: color-burn; */
+}
