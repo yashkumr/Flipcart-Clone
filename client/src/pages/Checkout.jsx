@@ -24,7 +24,7 @@ const Checkout = () => {
     dispatch(getCartTotal());
   }, [cart]);
 
-  const checkoutHandler = async (amount) => {
+  const checkoutHandler = async (amount, productCart, useAuth) => {
     const {
       data: { key },
     } = await axios.get("http://localhost:8000/api/getkey");
@@ -32,6 +32,8 @@ const Checkout = () => {
       data: { order },
     } = await axios.post("http://localhost:8000/api/checkout", {
       amount,
+      productCart,
+      useAuth,
     });
     // console.log("hello");
     // console.log(order);
@@ -241,7 +243,7 @@ const Checkout = () => {
 
                           <Link to="/product/checkout">
                       <button
-                        onClick={() => checkoutHandler(totalPrice)}
+                        onClick={() => checkoutHandler(totalPrice, cart,auth)}
                         type="button"
                         className="btn btn-primary btn-lg btn-block"
                       >
