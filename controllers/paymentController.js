@@ -27,7 +27,7 @@ export const checkout = async (req, res) => {
     const orders = await new orderModel({
       products: productCart,
       // payment: result,
-      // buyer: req.user._id,
+      buyer: useAuth.user,
     }).save();
     
   } catch (error) {
